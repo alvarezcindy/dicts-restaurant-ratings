@@ -15,6 +15,10 @@ def list_restaurant_ratings(filename):
             restaurant, rating = line.rstrip().split(":")
             rest_ratings[restaurant] = rating
 
+        restaurant = input("Please enter a restaurant name.\n>").title()
+        rating = input("Please enter a rating for that restaurant.\n>")
+        rest_ratings[restaurant] = rating
+
         for restaurant, rating in sorted(rest_ratings.items()):
             print(f'{restaurant} is rated at {rating}.')
 
